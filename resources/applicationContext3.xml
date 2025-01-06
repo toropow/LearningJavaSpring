@@ -9,5 +9,6 @@
 <!--    <bean id = "myPet" class = "org.example.Dog" scope="prototype"/>-->
 
     <context:component-scan base-package="org.example"/>
+    <context:property-placeholder location="classpath:myApp.properties"/>
 
 </beans>
