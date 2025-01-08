@@ -1,19 +1,31 @@
 package aop;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UniLibrary extends AbstractLibrary {
-    public void getBook(Book bookName) {
-        System.out.println("We take book from UniLibrary " + bookName.getName());
+    public void getBook() {
+        System.out.println("We take book from UniLibrary ");
     }
 
-    public String returnBook(){
+    public void returnBook(){
         System.out.println("We return book from UniLibrary");
-        return "OK";
     }
 
-    public void getMagazine(int a, int b){
+    public void getMagazine(){
         System.out.println("We take magazine from UniLibrary");
+    }
+
+    public void returnMagazine(){
+        System.out.println("We return magazine to UniLibrary");
+    }
+
+    public void addBook(){
+        System.out.println("We add book to UniLibrary");
+    }
+
+    public void addMagazine(){
+        System.out.println("We add magazine to UniLibrary");
     }
 }
