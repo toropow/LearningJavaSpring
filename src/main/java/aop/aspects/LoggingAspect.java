@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoggingAspect {
-    @Before("execution(public void get*())")
-    public void boefreGetBookAdvice(){
-        System.out.println("boefreGetBookAdvice: try to get book");
+    @Before("execution(public void getBook(aop.Book))")
+    public void beforeGetBookAdvice(){
+        System.out.println("beforeGetBookAdvice: try to get book");
     }
 
-    @Before("execution(* get*())")
-    public void beforeReturnBookAdvice(){
-        System.out.println("ReturnGetBookAdvice: try to return book");
-    }
+//    @Before("execution(* get*())")
+//    public void beforeReturnBookAdvice(){
+//        System.out.println("ReturnGetBookAdvice: try to return book");
+//    }
 }
