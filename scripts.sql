@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bestuser;
+GRANT USAGE ON SEQUENCE employees_id_seq TO bestuser;
